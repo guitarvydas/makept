@@ -22,4 +22,12 @@
 #      | sed -E -e '/^[ \t]*$/d'
 
 
-d2fpfrs.bash helloworld.drawio drawio.ohm drawio.glue d2fsupport.js
+d2fpfrs.bash helloworld.drawio drawio.ohm drawio.glue d2fsupport.js \
+	     | d2fpfrs.bash - diagram.ohm diagram.glue  d2fsupport.js \
+	     | d2fpfrs.bash - styleexpander.ohm styleexpander.glue  d2fsupport.js \
+	     | d2fpfrs.bash - factbase.ohm factbase.glue  d2fsupport.js \
+	     | sed -E -e 's/</\n</g' \
+	     | sort \
+	     | sed -E -e '/^[ \t]*$/d'
+
+

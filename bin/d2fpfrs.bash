@@ -6,9 +6,6 @@ grammar=${d2fapp}/$2
 glue=${d2fapp}/$3
 temp2=${d2fapp}/d2fsupport.js
 support=`realpath ${temp2}`
-echo
-echo d2fpfrs.bash
-set -x
 currdir=`pwd`
 dir=`dirname ${currdir}`
 appdir=`dirname ${support}`
