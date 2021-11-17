@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -f queryfb.pl
+cat - >queryfb.pl
+swipl -q -g 'consult(query).' -g 'pall.' -g 'halt.'
