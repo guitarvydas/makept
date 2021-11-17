@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+trap 'catch' ERR
+
+catch () {
+    exit 1
+}
+
+# usage: pf source-file grammar-file
+pdir=~/quicklisp/local-projects/pfr
+docker run util pf $1 $2
